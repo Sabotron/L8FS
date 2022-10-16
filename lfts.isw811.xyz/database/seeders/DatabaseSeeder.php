@@ -18,9 +18,14 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
 
+
+        Post::factory(10)->create();
+
+        /*
         User::truncate();
         Category::truncate();
         Post::truncate();
+
 
         $user= User::factory()->create();
 
@@ -74,6 +79,6 @@ class DatabaseSeeder extends Seeder
             'excerpt' => 'excerpt of hobbies post',
             'body' => 'toda la hablada del post hobbies...'
 
-        ]);
+        ]);*/
     }
 }

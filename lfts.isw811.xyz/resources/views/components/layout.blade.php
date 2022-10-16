@@ -5,5 +5,5 @@
 </head>
 
 <body>
-    {{$slot}}
+    {{ $slot }}
 </body>
