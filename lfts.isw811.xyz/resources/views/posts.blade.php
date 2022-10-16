@@ -1,6 +1,7 @@
-@extends('layout')
+<x-layout>
 
-@section('content')
+<x-slot name="content">
+
     @foreach ($posts as $post)
         <div>
             <h1>
@@ -8,7 +9,13 @@
                     {{ $post->title}} <!-- blade-->
                 </a>
             </h1>
+            <p>
+                <a href="/categories/{{$post->category->slug}}">{{$post->category->name}}</a>
+            </p>
+
         </div>
         <div>{{$post->excerpt}}</div>
     @endforeach
-@endsection
+
+</x-slot>
+</x-layout>  
