@@ -13,7 +13,7 @@
 
                 <div class="mt-4">
                     <h1 class="text-3xl">
-                        <a href="/posts{{$post->slug}}">
+                        <a href="/posts/{{$post->slug}}">
                             {{$post->title}}
                         </a>
                     </h1>

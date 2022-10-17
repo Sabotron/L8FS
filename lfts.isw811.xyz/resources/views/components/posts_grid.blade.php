@@ -1,4 +1,5 @@
 @props(['posts'])
+
 <x-post_featured_card :post="$posts[0]" />
 
 @if ($posts->count() > 1)
