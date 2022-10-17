@@ -17,7 +17,8 @@
                     <div class="flex items-center lg:justify-center text-sm mt-4">
                         <img src="/images/lary-avatar.svg" alt="Lary avatar">
                         <div class="ml-3 text-left">
-                            <h5 class="font-bold"><?php echo e($post->author->name); ?></h5>
+                        <h5 class="font-bold">
+                        <a href="/?authors=<?php echo e($post->author->username); ?>"><?php echo e($post->author->name); ?></a> </h5>
                         </div>
                     </div>
                 </div>
@@ -73,4 +74,4 @@
 <?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
 <?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
 <?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
-<?php endif; ?><?php /**PATH /home/vagrant/sites/lfts.isw811.xyz/resources/views/post.blade.php ENDPATH**/ ?>
+<?php endif; ?><?php /**PATH /home/vagrant/sites/lfts.isw811.xyz/resources/views/posts/show.blade.php ENDPATH**/ ?>

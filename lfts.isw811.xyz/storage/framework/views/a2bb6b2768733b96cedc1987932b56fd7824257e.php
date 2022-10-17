@@ -21,7 +21,7 @@
 
                 <div class="mt-4">
                     <h1 class="text-3xl">
-                        <a href="/posts<?php echo e($post->slug); ?>">
+                        <a href="/posts/<?php echo e($post->slug); ?>">
                             <?php echo e($post->title); ?>
 
                         </a>
@@ -44,8 +44,8 @@
                 <div class="flex items-center text-sm">
                     <img src="/images/lary-avatar.svg" alt="Lary avatar">
                     <div class="ml-3">
-                        <h5 class="font-bold"><?php echo e($post->author->name); ?></h5>
-                        <h6>Mascot at Laracasts</h6>
+                        <h5 class="font-bold">
+                            <a href="/?authors=<?php echo e($post->author->username); ?>"><?php echo e($post->author->name); ?></a></h5>
                     </div>
                 </div>
 
