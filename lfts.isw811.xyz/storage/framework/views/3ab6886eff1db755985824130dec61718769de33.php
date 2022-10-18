@@ -25,11 +25,11 @@
         </button>
      <?php $__env->endSlot(); ?>
     <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
-<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.dropdown_item','data' => ['href' => '/','active' => request()->routeIs('home')]]); ?>
+<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.dropdown_item','data' => ['href' => '/?'.e(http_build_query(request()->except('category', 'page'))).'','active' => request()->routeIs('home')]]); ?>
 <?php $component->withName('dropdown_item'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
-<?php $component->withAttributes(['href' => '/','active' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute(request()->routeIs('home'))]); ?> All <?php echo $__env->renderComponent(); ?>
+<?php $component->withAttributes(['href' => '/?'.e(http_build_query(request()->except('category', 'page'))).'','active' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute(request()->routeIs('home'))]); ?> All <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
 <?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
 <?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
@@ -38,11 +38,11 @@
 
     <?php $__currentLoopData = $categories; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
     <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
-<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.dropdown_item','data' => ['href' => '/?category='.e($category->slug).'&'.e(http_build_query(request()->except('category'))).'','active' => request()->is("categories/{$category->slug}")]]); ?>
+<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.dropdown_item','data' => ['href' => '/?category='.e($category->slug).'&'.e(http_build_query(request()->except('category', 'page'))).'','active' => request()->is("categories/{$category->slug}")]]); ?>
 <?php $component->withName('dropdown_item'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
-<?php $component->withAttributes(['href' => '/?category='.e($category->slug).'&'.e(http_build_query(request()->except('category'))).'','active' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute(request()->is("categories/{$category->slug}"))]); ?>
+<?php $component->withAttributes(['href' => '/?category='.e($category->slug).'&'.e(http_build_query(request()->except('category', 'page'))).'','active' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute(request()->is("categories/{$category->slug}"))]); ?>
         <?php echo e(ucwords($category->name)); ?>
 
      <?php echo $__env->renderComponent(); ?>

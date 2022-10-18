@@ -44,7 +44,7 @@
         </div>
         </header>
 
-        <div class="text-sm mt-4">
+        <div class="text-sm mt-4 space-y-4">
             <p>
                 <?php echo e($post->excerpt); ?>
 
@@ -58,7 +58,8 @@
                 <img src="/images/lary-avatar.svg" alt="Lary avatar">
                 <div class="ml-3">
                     <h5 class="font-bold">
-                        <a href="/?authors=/<?php echo e($post->author->username); ?>"><?php echo e($post->author->name); ?></a> </h5>
+                        <a href="/?authors=/<?php echo e($post->author->username); ?>"><?php echo e($post->author->name); ?></a>
+                    </h5>
                 </div>
             </div>
 
@@ -67,5 +68,5 @@
             </div>
         </footer>
     </div>
-    </div>
+    
 </article><?php /**PATH /home/vagrant/sites/lfts.isw811.xyz/resources/views/components/post_card.blade.php ENDPATH**/ ?>
