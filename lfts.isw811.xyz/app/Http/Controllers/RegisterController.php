@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\User;
 
 class RegisterController extends Controller
@@ -19,11 +18,7 @@ class RegisterController extends Controller
             'password' => 'required|min:7|max:255'
         ]);
 
-        $attributes['password'] = bcrypt($attributes['password']);
-
-        $user = User::create($attributes);
-
-        auth()->login($user);
+        User::create($attributes);
 
         return redirect('/')->with ('success','User account has been created.');;
     }
