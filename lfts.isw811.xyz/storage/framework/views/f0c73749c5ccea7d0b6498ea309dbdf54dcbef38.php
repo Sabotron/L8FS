@@ -68,5 +68,5 @@
             </div>
         </footer>
     </div>
-    
+
 </article><?php /**PATH /home/vagrant/sites/lfts.isw811.xyz/resources/views/components/post_card.blade.php ENDPATH**/ ?>

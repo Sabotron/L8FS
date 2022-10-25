@@ -47,5 +47,5 @@
             </div>
         </footer>
     </div>
-    
+
 </article>

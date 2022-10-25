@@ -10,13 +10,24 @@
 <article class="transition-colors duration-300 hover:bg-gray-100 border border-black border-opacity-0 hover:border-opacity-5 rounded-xl">
     <div class="py-6 px-5 lg:flex">
         <div class="flex-1 lg:mr-8">
-            <img src="<?php echo e(asset ('storage/' . $post->thumbnail)); ?>"  alt="Blog Post illustration" class="rounded-xl">
+            <img src="<?php echo e(asset ('storage/' . $post->thumbnail)); ?>" alt="Blog Post illustration" class="rounded-xl">
         </div>
 
         <div class="flex-1 flex flex-col justify-between">
             <header class="mt-8 lg:mt-0">
                 <div class="space-x-2">
-                    <a href="/categories/<?php echo e($post->category->slug); ?>" class="px-3 py-1 border border-blue-300 rounded-full text-blue-300 text-xs uppercase font-semibold" style="font-size: 10px"><?php echo e($post->category->name); ?></a>
+                    <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.category_button','data' => ['category' => $post->category]]); ?>
+<?php $component->withName('category_button'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php $component->withAttributes(['category' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute($post->category)]); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
+<?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
+<?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
+<?php endif; ?>
                 </div>
 
                 <div class="mt-4">
@@ -45,7 +56,8 @@
                     <img src="/images/lary-avatar.svg" alt="Lary avatar">
                     <div class="ml-3">
                         <h5 class="font-bold">
-                            <a href="/?authors=<?php echo e($post->author->username); ?>"><?php echo e($post->author->name); ?></a></h5>
+                            <a href="/?authors=<?php echo e($post->author->username); ?>"><?php echo e($post->author->name); ?></a>
+                        </h5>
                     </div>
                 </div>
 

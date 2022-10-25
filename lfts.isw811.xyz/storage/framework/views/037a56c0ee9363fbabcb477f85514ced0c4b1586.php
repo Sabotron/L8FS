@@ -7,7 +7,7 @@
     if (array_key_exists($__key, $__defined_vars)) unset($$__key);
 } ?>
 <?php unset($__defined_vars); ?>
-<div x-data="{show: false}" @click.away="show = false">
+<div x-data="{show: false}" @click.away="show = false" class="relative">
 <div @click="show = ! show">
     <?php echo e($trigger); ?>
 

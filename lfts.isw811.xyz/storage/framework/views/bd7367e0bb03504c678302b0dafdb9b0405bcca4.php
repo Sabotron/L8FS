@@ -137,4 +137,4 @@
 <?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
 <?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
 <?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
-<?php endif; ?><?php /**PATH /home/vagrant/sites/lfts.isw811.xyz/resources/views/posts/create.blade.php ENDPATH**/ ?>
+<?php endif; ?><?php /**PATH /home/vagrant/sites/lfts.isw811.xyz/resources/views/admin/posts/create.blade.php ENDPATH**/ ?>
