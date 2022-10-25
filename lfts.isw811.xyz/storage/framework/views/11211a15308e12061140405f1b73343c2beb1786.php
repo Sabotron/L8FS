@@ -41,6 +41,7 @@
                      <?php $__env->slot('trigger', null, []); ?> 
                         <button class="text-xs font-bold uppercase">Welcome, <?php echo e(auth()->user()->name); ?>! </button>
                      <?php $__env->endSlot(); ?>
+                    <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('admin')): ?>
                     <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
 <?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.dropdown_item','data' => ['href' => '/admin/posts','active' => request()->is('admin/posts')]]); ?>
 <?php $component->withName('dropdown_item'); ?>
@@ -63,6 +64,9 @@
 <?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
 <?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
 <?php endif; ?>
+
+                    <?php endif; ?>
+
                     <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
 <?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.dropdown_item','data' => ['href' => '#','xData' => '{}','@click.prevent' => 'document.querySelector(\'#logout-form\').submit()']]); ?>
 <?php $component->withName('dropdown_item'); ?>
